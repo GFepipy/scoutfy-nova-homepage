@@ -1802,7 +1802,11 @@ h2 em {
   display: none;
 }
 
-.features,
+.features {
+  border: 0;
+  background: var(--cor-fundo-principal);
+}
+
 .pro-section,
 .journey {
   border: 0;
@@ -1815,12 +1819,12 @@ h2 em {
 
 .feature-card {
   padding: 32px;
-  background: var(--cor-fundo-principal);
+  background: var(--cor-fundo-cartao);
   transition: background-color var(--duracao-transicao) ease;
 }
 
 .feature-main {
-  background: var(--cor-fundo-principal);
+  background: var(--cor-fundo-cartao);
 }
 
 .feature-main,
