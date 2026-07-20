@@ -87,10 +87,7 @@ export default function Home() {
       <header className="site-header">
         <div className="shell header-inner">
           <a className="brand" href="#top" aria-label="Scoutfy — início">
-            <span className="brand-mark" aria-hidden="true">
-              <span />
-            </span>
-            <span>Scoutfy</span>
+            <img className="brand-logo" src="/logo-scoutfy.svg" alt="Scoutfy" />
           </a>
 
           <nav className="desktop-nav" aria-label="Navegação principal">
@@ -381,7 +378,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="shell footer-main">
           <div className="footer-brand">
-            <a className="brand" href="#top"><span className="brand-mark" aria-hidden="true"><span /></span><span>Scoutfy</span></a>
+            <a className="brand" href="#top"><img className="brand-logo" src="/logo-scoutfy.svg" alt="Scoutfy" /></a>
             <p>Onde o talento encontra contexto, conexão e oportunidade real.</p>
           </div>
           <div className="footer-links">
