@@ -2273,3 +2273,50 @@ h3 {
     padding: 30px 22px 34px;
   }
 }
+
+/* Tipografia de ação consistente em toda a página. */
+.button {
+  text-transform: uppercase;
+}
+
+.athletes-spotlight .benefit-list b,
+.pro-section .pro-benefits b,
+.faq-list summary {
+  text-transform: uppercase;
+}
+
+/* CTA compacto: a imagem acompanha a altura do card e preserva seu foco. */
+.cta-card {
+  height: 400px;
+  min-height: 0;
+  max-height: 500px;
+}
+
+.cta-media {
+  min-height: 0;
+  height: 400px;
+}
+
+.cta-media img {
+  object-position: center 42%;
+}
+
+@media (max-width: 800px) {
+  .cta-card {
+    height: auto;
+    max-height: 500px;
+  }
+
+  .cta-media {
+    min-height: 150px;
+    height: 150px;
+  }
+
+  .cta-content {
+    padding-block: 24px;
+  }
+
+  .cta-content .cta-caption {
+    margin-top: 18px;
+  }
+}
