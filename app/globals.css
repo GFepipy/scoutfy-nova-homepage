@@ -2279,6 +2279,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.text-link {
+  text-transform: uppercase;
+}
+
 .athletes-spotlight .benefit-list b,
 .pro-section .pro-benefits b,
 .faq-list summary {
