@@ -1802,11 +1802,7 @@ h2 em {
   display: none;
 }
 
-.features {
-  border: 0;
-  background: var(--cor-fundo-principal);
-}
-
+.features,
 .pro-section,
 .journey {
   border: 0;
@@ -1819,12 +1815,12 @@ h2 em {
 
 .feature-card {
   padding: 32px;
-  background: var(--cor-fundo-cartao);
+  background: var(--cor-fundo-principal);
   transition: background-color var(--duracao-transicao) ease;
 }
 
 .feature-main {
-  background: var(--cor-fundo-cartao);
+  background: var(--cor-fundo-principal);
 }
 
 .feature-main,
@@ -2130,5 +2126,150 @@ h3 {
 
   .trials-card {
     padding: 28px 22px;
+  }
+}
+
+/* Menu e rodapé seguem a largura ampla da home original; as seções mantêm a malha de conteúdo. */
+.site-header .header-inner,
+.site-footer .shell {
+  width: min(1760px, 100%);
+}
+
+.hero {
+  padding-top: 40px;
+}
+
+/* Recoloca o radar como detalhe visual do hero, sem competir com a leitura. */
+.hero-radar {
+  display: block;
+  pointer-events: none;
+}
+
+/* Exceção editorial: labels curtas em spans podem ter 12px. */
+.image-label,
+.audience-card > small,
+.card-kicker,
+.journey-list small,
+.trial-points span,
+.cta-content .cta-caption,
+.chip-row span,
+.persona-tabs button,
+.scout-overlay small {
+  font-size: 12px !important;
+}
+
+.persona-tabs button {
+  appearance: none;
+  padding: 9px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  color: var(--cor-texto-secundario);
+  background: transparent;
+  font-family: inherit;
+  font-weight: var(--peso-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color var(--duracao-transicao) ease, color var(--duracao-transicao) ease, border-color var(--duracao-transicao) ease;
+}
+
+.persona-tabs button:hover,
+.persona-tabs button.is-active {
+  border-color: var(--mint);
+  color: var(--ink);
+  background: var(--mint);
+}
+
+.pro-benefits article > span {
+  width: 48px;
+  height: 48px;
+  font-size: 28px !important;
+}
+
+.trial-points span {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.journey .eyebrow {
+  color: var(--mint);
+}
+
+.step-marker {
+  border: 1px solid var(--cor-borda);
+  border-radius: 50%;
+  background: var(--cor-fundo-cartao);
+  box-shadow: none;
+}
+
+.step-marker span {
+  font-size: 16px !important;
+}
+
+.journey-list p {
+  max-width: none;
+  margin: 0;
+}
+
+.cta-card {
+  min-height: 400px;
+  background: var(--cor-fundo-cartao);
+  color: var(--cor-texto-principal);
+}
+
+.cta-media {
+  min-height: 400px;
+}
+
+.cta-content {
+  padding: clamp(36px, 4vw, 60px);
+}
+
+.cta-card .eyebrow {
+  color: var(--mint);
+}
+
+.cta-content > p:not(.eyebrow),
+.cta-content .cta-caption {
+  color: var(--cor-texto-secundario);
+}
+
+.cta-content .button-dark {
+  color: var(--ink);
+  background: var(--mint);
+}
+
+@media (max-width: 1840px) {
+  .site-header .header-inner,
+  .site-footer .shell {
+    width: 100%;
+    padding-inline: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-radar {
+    display: none;
+  }
+
+  .cta-card,
+  .cta-media {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header .header-inner,
+  .site-footer .shell {
+    padding-inline: var(--padding-conteudo);
+  }
+
+  .hero {
+    padding-top: 24px;
+  }
+
+  .cta-content {
+    padding: 30px 22px 34px;
   }
 }

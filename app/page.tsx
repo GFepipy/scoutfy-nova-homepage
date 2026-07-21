@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const audiences = [
   {
     number: "01",
@@ -80,6 +84,65 @@ const faqs = [
       "Sim. O contato centralizado aproxima os diferentes perfis da rede e ajuda cada conversa a avançar com mais clareza e agilidade.",
   },
 ];
+
+const professionalPersonas = [
+  {
+    label: "Clubes",
+    benefits: [
+      ["⌕", "Scouting com foco", "Use filtros objetivos para reduzir ruído e chegar a perfis relevantes."],
+      ["◎", "Perfis com contexto", "Avalie trajetória, vídeos e informações importantes antes do primeiro contato."],
+      ["↗", "Captação mais ágil", "Organize sua descoberta e avance nas oportunidades com mais clareza."],
+    ],
+  },
+  {
+    label: "Empresários",
+    benefits: [
+      ["◎", "Rede organizada", "Acompanhe talentos e centralize contatos em um só ambiente."],
+      ["⌕", "Novos perfis", "Descubra atletas alinhados ao seu trabalho e à sua estratégia."],
+      ["↗", "Negociações que avançam", "Crie conexões com mais agilidade, contexto e proximidade."],
+    ],
+  },
+  {
+    label: "Profissionais",
+    benefits: [
+      ["⌕", "Visão de campo", "Encontre perfis e oportunidades que combinam com sua experiência."],
+      ["◎", "Conexões qualificadas", "Aproxime-se de atletas, clubes e projetos dentro do futebol."],
+      ["↗", "Sua trajetória em movimento", "Mostre seu trabalho e abra espaço para a próxima oportunidade."],
+    ],
+  },
+];
+
+function PersonaTabs() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activePersona = professionalPersonas[activeIndex];
+
+  return (
+    <>
+      <div className="persona-tabs" aria-label="Públicos profissionais" role="tablist">
+        {professionalPersonas.map((persona, index) => (
+          <button
+            type="button"
+            key={persona.label}
+            className={index === activeIndex ? "is-active" : ""}
+            role="tab"
+            aria-selected={index === activeIndex}
+            onClick={() => setActiveIndex(index)}
+          >
+            {persona.label}
+          </button>
+        ))}
+      </div>
+      <div className="pro-benefits">
+        {activePersona.benefits.map(([icon, title, text]) => (
+          <article key={title}>
+            <span aria-hidden="true">{icon}</span>
+            <div><b>{title}</b><p>{text}</p></div>
+          </article>
+        ))}
+      </div>
+    </>
+  );
+}
 
 export default function Home() {
   return (
@@ -171,7 +234,7 @@ export default function Home() {
         <div className="section-intro section-intro-row">
           <div>
             <p className="eyebrow"><span /> Um campo. Quatro jornadas.</p>
-            <h2>Encontre seu lugar na Scoutfy.</h2>
+            <h2>Encontre seu lugar na <em>Scoutfy.</em></h2>
           </div>
           <p>
             Uma rede para quem quer ser descoberto e para quem trabalha todos os dias descobrindo, desenvolvendo e conectando talentos.
@@ -262,7 +325,7 @@ export default function Home() {
         </div>
         <div className="spotlight-content">
           <p className="eyebrow"><span /> Para atletas e famílias</p>
-          <h2>Seu caminho não começa no estádio. Começa sendo visto.</h2>
+          <h2>Seu caminho não começa no estádio. Começa sendo <em>visto.</em></h2>
           <p className="lead">
             A Scoutfy ajuda você a apresentar quem é, onde joga e aonde quer chegar — com mais contexto para quem avalia e mais clareza para quem acompanha sua jornada.
           </p>
@@ -279,18 +342,11 @@ export default function Home() {
         <div className="shell pro-layout">
           <div className="spotlight-content">
             <p className="eyebrow"><span /> Para quem constrói o jogo</p>
-            <h2>Decisões mais rápidas. Contexto mais completo.</h2>
+            <h2><em>Decisões</em> mais rápidas. Contexto mais completo.</h2>
             <p className="lead">
               Scoutfy organiza a descoberta de talentos e aproxima quem observa, orienta, negocia e desenvolve o futebol.
             </p>
-            <div className="persona-tabs" aria-label="Públicos profissionais">
-              <span>Clubes</span><span>Empresários</span><span>Profissionais</span>
-            </div>
-            <div className="pro-benefits">
-              <article><span>⌕</span><div><b>Scouting com foco</b><p>Use filtros objetivos para reduzir ruído e chegar a perfis relevantes.</p></div></article>
-              <article><span>◎</span><div><b>Rede organizada</b><p>Acompanhe talentos e concentre conversas no mesmo ambiente.</p></div></article>
-              <article><span>↗</span><div><b>Conexões que avançam</b><p>Ganhe agilidade da descoberta ao primeiro contato.</p></div></article>
-            </div>
+            <PersonaTabs />
             <a className="text-link" href="https://scoutfy.com.br/Account/Register">Criar perfil profissional <span aria-hidden="true">↗</span></a>
           </div>
           <div className="spotlight-media landscape-media">
@@ -309,7 +365,7 @@ export default function Home() {
           <div className="trials-grid" aria-hidden="true" />
           <div className="trials-content">
             <p className="eyebrow"><span /> Peneiras Scoutfy</p>
-            <h2>Uma peneira pode ser o próximo capítulo.</h2>
+            <h2>Uma peneira pode ser o próximo <em>capítulo.</em></h2>
             <p>
               Encontre avaliações, veja informações importantes e prepare-se para oportunidades que combinam com seu momento no futebol.
             </p>
@@ -331,7 +387,7 @@ export default function Home() {
         <div className="shell">
           <div className="section-intro centered-intro">
             <p className="eyebrow"><span /> Como funciona</p>
-            <h2>Do primeiro cadastro à próxima conexão.</h2>
+            <h2>Do primeiro cadastro à próxima <em>conexão.</em></h2>
             <p>Uma jornada simples para colocar seu talento, sua busca ou sua experiência em movimento.</p>
           </div>
           <ol className="journey-list">
@@ -354,7 +410,7 @@ export default function Home() {
           </div>
           <div className="cta-content">
             <p className="eyebrow"><span /> Entre em campo</p>
-            <h2>Seu próximo passo começa com um perfil.</h2>
+            <h2>Seu próximo passo começa com um <em>perfil.</em></h2>
             <p>Faça parte da rede que conecta talento, experiência e oportunidade dentro do futebol.</p>
             <a className="button button-dark" href="https://scoutfy.com.br/Account/Register">Criar minha conta agora <span aria-hidden="true">↗</span></a>
             <span className="cta-caption">ATLETAS · CLUBES · EMPRESÁRIOS · PROFISSIONAIS</span>
@@ -365,7 +421,7 @@ export default function Home() {
       <section className="faq section shell" id="faq">
         <div className="faq-intro">
           <p className="eyebrow"><span /> FAQ</p>
-          <h2>Dúvidas sobre a Scoutfy.</h2>
+          <h2>Dúvidas sobre a <em>Scoutfy.</em></h2>
           <p>Respostas diretas para começar com confiança.</p>
           <a className="text-link" href="mailto:contato@scoutfy.com.br">Ainda tem dúvidas? Fale com a gente <span aria-hidden="true">↗</span></a>
         </div>
