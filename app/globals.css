@@ -1930,6 +1930,121 @@ h2 em {
   border-radius: var(--raio-card);
 }
 
+/* Conteúdo usa 1340px úteis em desktop; o respiro entra quando a viewport se aproxima da malha. */
+.shell {
+  width: min(var(--largura-maxima), 100%);
+  padding-inline: 0;
+}
+
+.header-inner {
+  width: min(var(--largura-maxima-cabecalho), 100%);
+  padding-inline: 0;
+}
+
+/* A interface não reduz a leitura abaixo de 16px. */
+.site-header :is(a, button, small, span, strong, b),
+main :is(p, a, button, summary, small, span, strong, b, li),
+.site-footer :is(p, a, small, span, strong, b) {
+  font-size: 16px !important;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+.site-footer h3 {
+  font-size: 16px;
+}
+
+.cta-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 500px;
+  padding: 0;
+  overflow: hidden;
+  text-align: left;
+}
+
+.cta-media {
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.cta-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(40px, 5.2vw, 76px);
+}
+
+.cta-content h2 {
+  max-width: 560px;
+}
+
+.cta-content > p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 22px 0 28px;
+  color: rgba(20, 20, 20, 0.75);
+  line-height: 1.5;
+}
+
+.cta-content .button {
+  position: static;
+}
+
+.cta-content .cta-caption {
+  position: static;
+  display: block;
+  margin-top: 34px;
+  color: rgba(20, 20, 20, 0.72);
+  font-weight: var(--peso-bold);
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 1400px) {
+  .shell,
+  .header-inner {
+    width: 100%;
+    padding-inline: var(--padding-conteudo);
+  }
+}
+
+@media (max-width: 800px) {
+  .cta-card {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-media {
+    min-height: 330px;
+  }
+
+  .cta-content {
+    padding: 42px 32px 48px;
+  }
+}
+
+@media (max-width: 620px) {
+  .cta-media {
+    min-height: 260px;
+  }
+
+  .cta-content {
+    padding: 32px 22px 38px;
+  }
+
+  .cta-content .button {
+    width: 100%;
+  }
+}
+
 .faq-list summary {
   font-weight: var(--peso-bold);
 }

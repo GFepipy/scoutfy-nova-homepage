@@ -349,12 +349,16 @@ export default function Home() {
 
       <section className="cta-section section shell">
         <div className="cta-card">
-          <div className="cta-orbit" aria-hidden="true"><span /><i /></div>
-          <p className="eyebrow"><span /> Entre em campo</p>
-          <h2>Seu próximo passo começa com um perfil.</h2>
-          <p>Faça parte da rede que conecta talento, experiência e oportunidade dentro do futebol.</p>
-          <a className="button button-dark" href="https://scoutfy.com.br/Account/Register">Criar minha conta agora <span aria-hidden="true">↗</span></a>
-          <span className="cta-caption">ATLETAS · CLUBES · EMPRESÁRIOS · PROFISSIONAIS</span>
+          <div className="cta-media">
+            <img src="/images/imagem-cta.png" alt="Jovem atleta em um campo de futebol" />
+          </div>
+          <div className="cta-content">
+            <p className="eyebrow"><span /> Entre em campo</p>
+            <h2>Seu próximo passo começa com um perfil.</h2>
+            <p>Faça parte da rede que conecta talento, experiência e oportunidade dentro do futebol.</p>
+            <a className="button button-dark" href="https://scoutfy.com.br/Account/Register">Criar minha conta agora <span aria-hidden="true">↗</span></a>
+            <span className="cta-caption">ATLETAS · CLUBES · EMPRESÁRIOS · PROFISSIONAIS</span>
+          </div>
         </div>
       </section>
 
