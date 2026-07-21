@@ -2321,6 +2321,23 @@ h3 {
   }
 }
 
+/* CTA mais compacto para eliminar a área vazia à direita em telas largas. */
+.cta-section {
+  width: min(1180px, 100%);
+  padding-inline: 0;
+}
+
+.faq .eyebrow {
+  color: var(--mint);
+}
+
+@media (max-width: 1260px) {
+  .cta-section {
+    width: 100%;
+    padding-inline: var(--padding-conteudo);
+  }
+}
+
 /* CTA com uma janela de imagem mais vertical, preservando o atleta no enquadramento. */
 .cta-card {
   grid-template-columns: minmax(0, 36%) minmax(0, 64%);
