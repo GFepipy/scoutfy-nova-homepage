@@ -2320,3 +2320,32 @@ h3 {
     margin-top: 18px;
   }
 }
+
+/* CTA com uma janela de imagem mais vertical, preservando o atleta no enquadramento. */
+.cta-card {
+  grid-template-columns: minmax(0, 36%) minmax(0, 64%);
+  height: 560px;
+  max-height: 650px;
+}
+
+.cta-media {
+  align-self: stretch;
+  height: 560px;
+}
+
+.cta-media img {
+  object-position: center 32%;
+}
+
+@media (max-width: 800px) {
+  .cta-card {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: 650px;
+  }
+
+  .cta-media {
+    height: 180px;
+    min-height: 180px;
+  }
+}
