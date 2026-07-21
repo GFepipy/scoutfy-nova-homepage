@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const asset = (path: string) => `${basePath}${path}`;
+
 const audiences = [
   {
     number: "01",
@@ -150,7 +153,7 @@ export default function Home() {
       <header className="site-header">
         <div className="shell header-inner">
           <a className="brand" href="#top" aria-label="Scoutfy — início">
-            <img className="brand-logo" src="/logo-scoutfy.svg" alt="Scoutfy" />
+            <img className="brand-logo" src={asset("/logo-scoutfy.svg")} alt="Scoutfy" />
           </a>
 
           <nav className="desktop-nav" aria-label="Navegação principal">
@@ -187,7 +190,7 @@ export default function Home() {
         <div className="hero-card">
           <img
             className="hero-image"
-            src="/images/scoutfy-hero.png"
+            src={asset("/images/scoutfy-hero.png")}
             alt="Jovem atleta em um campo de futebol simples após o treino"
           />
           <div className="hero-grid" aria-hidden="true" />
@@ -320,7 +323,7 @@ export default function Home() {
 
       <section className="spotlight section shell athletes-spotlight">
         <div className="spotlight-media portrait-media">
-          <img src="/images/scoutfy-athletes.png" alt="Pai ajudando o filho com a chuteira após o treino" />
+          <img src={asset("/images/scoutfy-athletes.png")} alt="Pai ajudando o filho com a chuteira após o treino" />
           <span className="image-label">Base · trajetória · futuro</span>
         </div>
         <div className="spotlight-content">
@@ -350,7 +353,7 @@ export default function Home() {
             <a className="text-link" href="https://scoutfy.com.br/Account/Register">Criar perfil profissional <span aria-hidden="true">↗</span></a>
           </div>
           <div className="spotlight-media landscape-media">
-            <img src="/images/scoutfy-professionals.png" alt="Profissionais analisando atletas em um campo de treinamento" />
+            <img src={asset("/images/scoutfy-professionals.png")} alt="Profissionais analisando atletas em um campo de treinamento" />
             <div className="scout-overlay">
               <span className="pulse-dot" />
               <div><small>Visão de campo</small><b>Talento com contexto</b></div>
@@ -361,7 +364,7 @@ export default function Home() {
 
       <section className="trials section shell" id="peneiras">
         <div className="trials-card">
-          <img src="/images/scoutfy-trials.png" alt="Jovens atletas participando de uma avaliação em campo simples" />
+          <img src={asset("/images/scoutfy-trials.png")} alt="Jovens atletas participando de uma avaliação em campo simples" />
           <div className="trials-grid" aria-hidden="true" />
           <div className="trials-content">
             <p className="eyebrow"><span /> Peneiras Scoutfy</p>
@@ -406,7 +409,7 @@ export default function Home() {
       <section className="cta-section section shell">
         <div className="cta-card">
           <div className="cta-media">
-            <img src="/images/imagem-cta.png" alt="Jovem atleta em um campo de futebol" />
+            <img src={asset("/images/imagem-cta.png")} alt="Jovem atleta em um campo de futebol" />
           </div>
           <div className="cta-content">
             <p className="eyebrow"><span /> Entre em campo</p>
@@ -438,7 +441,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="shell footer-main">
           <div className="footer-brand">
-            <a className="brand" href="#top"><img className="brand-logo" src="/logo-scoutfy.svg" alt="Scoutfy" /></a>
+            <a className="brand" href="#top"><img className="brand-logo" src={asset("/logo-scoutfy.svg")} alt="Scoutfy" /></a>
             <p>Onde o talento encontra contexto, conexão e oportunidade real.</p>
           </div>
           <div className="footer-links">
