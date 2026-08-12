@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const origin = `${protocol}://${host}`;
   const title = "Scoutfy — Onde o talento encontra oportunidade";
   const description =
-    "Conectamos atletas, clubes, empresários e profissionais em uma plataforma feita para transformar visibilidade em oportunidade real no futebol.";
+    "Conectamos atletas, clubes, empresários e técnicos em uma plataforma feita para transformar visibilidade em oportunidade real no futebol.";
 
   return {
     title,

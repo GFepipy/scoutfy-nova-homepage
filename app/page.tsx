@@ -26,7 +26,7 @@ const audiences = [
   },
   {
     number: "04",
-    title: "Profissional",
+    title: "Técnico",
     label: "Faça parte do jogo",
     text: "Mostre sua experiência e conecte-se a atletas, clubes e projetos dentro do futebol.",
   },
@@ -59,12 +59,12 @@ const faqs = [
   {
     question: "O que é a Scoutfy?",
     answer:
-      "A Scoutfy é uma plataforma de conexão esportiva. Ela ajuda atletas a ganharem visibilidade e facilita o trabalho de clubes, empresários, olheiros e outros profissionais do futebol.",
+      "A Scoutfy é uma plataforma de conexão esportiva. Ela ajuda atletas a ganharem visibilidade e facilita o trabalho de clubes, empresários, olheiros e outros técnicos do futebol.",
   },
   {
     question: "Quem pode criar uma conta?",
     answer:
-      "Atletas, clubes, empresários, técnicos, scouts e outros profissionais do futebol podem se cadastrar e acessar recursos específicos para a sua jornada.",
+      "Atletas, clubes, empresários, técnicos, scouts e outros técnicos do futebol podem se cadastrar e acessar recursos específicos para a sua jornada.",
   },
   {
     question: "Um atleta da base pode usar a plataforma?",
@@ -72,11 +72,16 @@ const faqs = [
       "Sim. A Scoutfy foi pensada especialmente para dar mais contexto e visibilidade a atletas em formação. Menores de idade devem realizar o cadastro com acompanhamento de um responsável.",
   },
   {
-    question: "Como clubes e profissionais encontram atletas?",
+    question: "Como clubes e técnicos encontram atletas?",
     answer:
       "A busca inteligente permite filtrar perfis por posição, idade, localização, histórico e outros critérios, com acesso rápido a vídeos e informações relevantes.",
   },
+
   {
+    question: "Quanto custa usar a Scoutfy?",
+    answer:
+      "A Scoutfy oferece um plano gratuito para atletas e planos mensais específicos para clubes, empresários e técnicos. Confira os valores e recursos de cada perfil na seção de planos.",
+  },  {
     question: "A Scoutfy também divulga peneiras?",
     answer:
       "Sim. A plataforma reúne eventos e peneiras para aproximar atletas de ambientes de avaliação e facilitar a descoberta de novas oportunidades.",
@@ -106,7 +111,7 @@ const professionalPersonas = [
     ],
   },
   {
-    label: "Profissionais",
+    label: "Técnicos",
     benefits: [
       ["⌕", "Visão de campo", "Encontre perfis e oportunidades que combinam com sua experiência."],
       ["◎", "Conexões qualificadas", "Aproxime-se de atletas, clubes e projetos dentro do futebol."],
@@ -121,7 +126,7 @@ function PersonaTabs() {
 
   return (
     <>
-      <div className="persona-tabs" aria-label="Públicos profissionais" role="tablist">
+      <div className="persona-tabs" aria-label="Públicos técnicos" role="tablist">
         {professionalPersonas.map((persona, index) => (
           <button
             type="button"
@@ -277,7 +282,7 @@ export default function Home() {
                 <p className="card-kicker">01 / Identidade</p>
                 <h3>Um perfil que joga por você.</h3>
                 <p>
-                  Reúna trajetória, posição, dados físicos, vídeos e melhores momentos em uma apresentação profissional, pronta para ser encontrada.
+                  Reúna trajetória, posição, dados físicos, vídeos em uma apresentação completa, pronta para ser encontrada.
                 </p>
                 <div className="chip-row"><span>Histórico</span><span>Vídeos</span><span>Posição</span></div>
               </div>
@@ -300,7 +305,7 @@ export default function Home() {
             <article className="feature-card contact-card">
               <p className="card-kicker">03 / Conexão</p>
               <h3>Contato direto</h3>
-              <p>Conversas centralizadas entre atletas, clubes e profissionais para cada oportunidade avançar.</p>
+              <p>Conversas centralizadas entre atletas, clubes e técnicos para cada oportunidade avançar.</p>
               <div className="message-visual" aria-hidden="true"><span>Uma nova conexão</span><i>↗</i></div>
             </article>
 
@@ -314,8 +319,8 @@ export default function Home() {
             <article className="feature-card network-card">
               <p className="card-kicker">05 / Rede</p>
               <h3>O futebol mais perto.</h3>
-              <p>Atletas, clubes, empresários e profissionais em um ecossistema que valoriza contexto e aproxima objetivos.</p>
-              <div className="network-visual" aria-hidden="true"><span>A</span><span>C</span><span>E</span><span>P</span></div>
+              <p>Atletas, clubes, empresários e técnicos em um ecossistema que valoriza contexto e aproxima objetivos.</p>
+              <div className="network-visual" aria-hidden="true"><span>A</span><span>C</span><span>E</span><span>T</span></div>
             </article>
           </div>
         </div>
@@ -350,10 +355,10 @@ export default function Home() {
               Scoutfy organiza a descoberta de talentos e aproxima quem observa, orienta, negocia e desenvolve o futebol.
             </p>
             <PersonaTabs />
-            <a className="text-link" href="https://scoutfy.com.br/Account/Register">Criar perfil profissional <span aria-hidden="true">↗</span></a>
+            <a className="text-link" href="https://scoutfy.com.br/Account/Register">Criar perfil técnico <span aria-hidden="true">↗</span></a>
           </div>
           <div className="spotlight-media landscape-media">
-            <img src={asset("/images/scoutfy-professionals.png")} alt="Profissionais analisando atletas em um campo de treinamento" />
+            <img src={asset("/images/scoutfy-professionals.png")} alt="Técnicos analisando atletas em um campo de treinamento" />
             <div className="scout-overlay">
               <span className="pulse-dot" />
               <div><small>Visão de campo</small><b>Talento com contexto</b></div>
@@ -406,6 +411,66 @@ export default function Home() {
         </div>
       </section>
 
+
+      <section className="plans section" id="planos">
+        <div className="shell">
+          <div className="section-intro centered-intro">
+            <p className="eyebrow"><span /> Planos Scoutfy</p>
+            <h2>Escolha o plano para o seu <em>momento.</em></h2>
+            <p>Recursos pensados para acompanhar quem joga, descobre, representa e desenvolve o futebol.</p>
+          </div>
+          <div className="plans-grid">
+            <article className="plan-card">
+              <p className="plan-label">Atleta</p>
+              <h3>Comece no radar.</h3>
+              <p className="plan-price"><span>R$</span><b>0</b><small>/mês</small></p>
+              <p className="plan-description">Crie seu perfil e dê visibilidade à sua trajetória.</p>
+              <ul>
+                <li>Perfil de atleta</li>
+                <li>Vídeos e histórico</li>
+                <li>Busca por peneiras</li>
+              </ul>
+              <a className="button button-secondary" href="https://scoutfy.com.br/Account/Register">Criar conta</a>
+            </article>
+            <article className="plan-card">
+              <p className="plan-label">Clube</p>
+              <h3>Descubra com critério.</h3>
+              <p className="plan-price"><span>R$</span><b>79</b><small>/mês</small></p>
+              <p className="plan-description">Acelere sua captação com uma busca mais organizada.</p>
+              <ul>
+                <li>Filtros avançados</li>
+                <li>Perfis com contexto</li>
+                <li>Contatos centralizados</li>
+              </ul>
+              <a className="button button-secondary" href="https://scoutfy.com.br/Account/Register">Escolher clube</a>
+            </article>
+            <article className="plan-card is-featured">
+              <p className="plan-label">Empresário</p>
+              <h3>Amplie sua rede.</h3>
+              <p className="plan-price"><span>R$</span><b>99</b><small>/mês</small></p>
+              <p className="plan-description">Organize talentos e construa conexões que avançam.</p>
+              <ul>
+                <li>Gestão de perfis</li>
+                <li>Busca por oportunidades</li>
+                <li>Rede de contatos</li>
+              </ul>
+              <a className="button button-primary" href="https://scoutfy.com.br/Account/Register">Escolher empresário</a>
+            </article>
+            <article className="plan-card">
+              <p className="plan-label">Técnico</p>
+              <h3>Mostre seu trabalho.</h3>
+              <p className="plan-price"><span>R$</span><b>49</b><small>/mês</small></p>
+              <p className="plan-description">Conecte sua experiência a atletas, clubes e projetos.</p>
+              <ul>
+                <li>Perfil técnico</li>
+                <li>Vitrine técnica</li>
+                <li>Conexões qualificadas</li>
+              </ul>
+              <a className="button button-secondary" href="https://scoutfy.com.br/Account/Register">Escolher técnico</a>
+            </article>
+          </div>
+        </div>
+      </section>
       <section className="cta-section section shell">
         <div className="cta-card">
           <div className="cta-media">
@@ -416,7 +481,7 @@ export default function Home() {
             <h2>Seu próximo passo começa com um <em>perfil.</em></h2>
             <p>Faça parte da rede que conecta talento, experiência e oportunidade dentro do futebol.</p>
             <a className="button button-dark" href="https://scoutfy.com.br/Account/Register">Criar minha conta agora <span aria-hidden="true">↗</span></a>
-            <span className="cta-caption">ATLETAS · CLUBES · EMPRESÁRIOS · PROFISSIONAIS</span>
+            <span className="cta-caption">ATLETAS · CLUBES · EMPRESÁRIOS · TÉCNICOS</span>
           </div>
         </div>
       </section>
