@@ -417,13 +417,13 @@ export default function Home() {
           <div className="section-intro centered-intro">
             <p className="eyebrow"><span /> Planos Scoutfy</p>
             <h2>Escolha o plano para o seu <em>momento.</em></h2>
-            <p>Recursos pensados para acompanhar quem joga, descobre, representa e desenvolve o futebol.</p>
+            <p>OS VALORES SÃO SÓ DE EXEMPLO. Recursos pensados para acompanhar quem joga, descobre, representa e desenvolve o futebol.</p>
           </div>
           <div className="plans-grid">
             <article className="plan-card">
               <p className="plan-label">Atleta</p>
               <h3>Comece no radar.</h3>
-              <p className="plan-price"><span>R$</span><b>0</b><small>/mês</small></p>
+              <p className="plan-price"><span>R$</span><b>39</b><small>/mês</small></p>
               <p className="plan-description">Crie seu perfil e dê visibilidade à sua trajetória.</p>
               <ul>
                 <li>Perfil de atleta</li>
@@ -435,7 +435,7 @@ export default function Home() {
             <article className="plan-card">
               <p className="plan-label">Clube</p>
               <h3>Descubra com critério.</h3>
-              <p className="plan-price"><span>R$</span><b>79</b><small>/mês</small></p>
+              <p className="plan-price"><span>R$</span><b>99</b><small>/mês</small></p>
               <p className="plan-description">Acelere sua captação com uma busca mais organizada.</p>
               <ul>
                 <li>Filtros avançados</li>
@@ -446,20 +446,20 @@ export default function Home() {
             </article>
             <article className="plan-card is-featured">
               <p className="plan-label">Empresário</p>
-              <h3>Amplie sua rede.</h3>
-              <p className="plan-price"><span>R$</span><b>99</b><small>/mês</small></p>
+              <h3>Amplie sua grande rede.</h3>
+              <p className="plan-price"><span>R$</span><b>89</b><small>/mês</small></p>
               <p className="plan-description">Organize talentos e construa conexões que avançam.</p>
               <ul>
                 <li>Gestão de perfis</li>
                 <li>Busca por oportunidades</li>
                 <li>Rede de contatos</li>
               </ul>
-              <a className="button button-primary" href="https://scoutfy.com.br/Account/Register">Escolher empresário</a>
+              <a className="button button-secondary" href="https://scoutfy.com.br/Account/Register">Escolher empresário</a>
             </article>
             <article className="plan-card">
               <p className="plan-label">Técnico</p>
               <h3>Mostre seu trabalho.</h3>
-              <p className="plan-price"><span>R$</span><b>49</b><small>/mês</small></p>
+              <p className="plan-price"><span>R$</span><b>79</b><small>/mês</small></p>
               <p className="plan-description">Conecte sua experiência a atletas, clubes e projetos.</p>
               <ul>
                 <li>Perfil técnico</li>
