@@ -422,7 +422,7 @@ export default function Home() {
           <div className="plans-grid">
             <article className="plan-card">
               <p className="plan-label">Atleta</p>
-              <h3>Comece no radar.</h3>
+              <h3>Receba novas oportunidades.</h3>
               <p className="plan-price"><span>R$</span><b>39</b><small>/mês</small></p>
               <p className="plan-description">Crie seu perfil e dê visibilidade à sua trajetória.</p>
               <ul>
@@ -434,7 +434,7 @@ export default function Home() {
             </article>
             <article className="plan-card">
               <p className="plan-label">Clube</p>
-              <h3>Descubra com critério.</h3>
+              <h3>Descubra novos talentos.</h3>
               <p className="plan-price"><span>R$</span><b>99</b><small>/mês</small></p>
               <p className="plan-description">Acelere sua captação com uma busca mais organizada.</p>
               <ul>
@@ -446,7 +446,7 @@ export default function Home() {
             </article>
             <article className="plan-card is-featured">
               <p className="plan-label">Empresário</p>
-              <h3>Amplie sua grande rede.</h3>
+              <h3>Conecte grandes talentos.</h3>
               <p className="plan-price"><span>R$</span><b>89</b><small>/mês</small></p>
               <p className="plan-description">Organize talentos e construa conexões que avançam.</p>
               <ul>
@@ -458,7 +458,7 @@ export default function Home() {
             </article>
             <article className="plan-card">
               <p className="plan-label">Técnico</p>
-              <h3>Mostre seu trabalho.</h3>
+              <h3>Mostre o seu trabalho.</h3>
               <p className="plan-price"><span>R$</span><b>79</b><small>/mês</small></p>
               <p className="plan-description">Conecte sua experiência a atletas, clubes e projetos.</p>
               <ul>
