@@ -446,7 +446,7 @@ export default function Home() {
             </article>
             <article className="plan-card is-featured">
               <p className="plan-label">Empresário</p>
-              <h3>Conecte grandes talentos.</h3>
+              <h3>Conecte talentos.</h3>
               <p className="plan-price"><span>R$</span><b>89</b><small>/mês</small></p>
               <p className="plan-description">Organize talentos e construa conexões que avançam.</p>
               <ul>
