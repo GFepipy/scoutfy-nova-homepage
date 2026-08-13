@@ -434,7 +434,7 @@ export default function Home() {
             </article>
             <article className="plan-card">
               <p className="plan-label">Clube</p>
-              <h3>Descubra novos talentos.</h3>
+              <h3>Descubra novos atletas.</h3>
               <p className="plan-price"><span>R$</span><b>99</b><small>/mês</small></p>
               <p className="plan-description">Acelere sua captação com uma busca mais organizada.</p>
               <ul>
